@@ -94,134 +94,195 @@ body
 				color: #40ACDE
 				padding-left: 11px
 
-	// filter
-	.filter
-		padding: 20px 60px 20px 14px
-		max-height: 364px
-		background: #FFF 
-		overflow: auto
-		+border-radius(10px)
-		+box
-		.filter__row
-			margin-bottom: 17px
-			+clr
+// filter
+.filter
+	padding: 20px 60px 20px 14px
+	max-height: 364px
+	background: #FFF 
+	overflow: auto
+	+border-radius(10px)
+	margin-bottom: 20px 
+	.filter__row
+		margin-bottom: 17px
+		+clr
 
-		.filter__place
-			float: left
-			width: 170px
-			font-size: 16px
-			overflow: hidden
-			p
-				color: #393939 
-				font-size: 11px
+	.filter__place
+		float: left
+		width: 170px
+		font-size: 16px
+		overflow: hidden
+		min-height: 2em 
+		p
+			color: #393939 
+			font-size: 11px
 
-		.filter__place_grey
+	.filter__place_grey
+		color: #999 
+		p
 			color: #999 
-			p
-				color: #999 
 
-		.filter__day
-			position: relative
-			float: left
-			margin-top: 5px
-			width: 700px
-			height: 17px
-			border-left: 1px solid #EFEFEF 
-			border-right: 1px solid #EFEFEF
-			background: #F5F5F5 
-			z-index: 1
-			+box
+	.filter__day
+		position: relative
+		float: left
+		margin-top: 5px
+		width: 700px
+		height: 17px
+		border-left: 1px solid #E6E6E6 
+		border-right: 1px solid #E6E6E6
+		background: #F5F5F5 
+		z-index: 1
+		+box
 
-		.filter__period
+	.filter__period
+		position: absolute
+		top: 0
+		margin-left: -14px
+		width: 14px
+		height: 100%
+		border-left: 1px solid #e6e6e6
+		border-right: 1px solid #e6e6e6
+		z-index: 4
+		background: rgba(#fff, .8)
+		
+		
+	.filter__period_1
+		left: 25%
+		
+	.filter__period_2
+		left: 50%
+
+	.filter__period_3
+		left: 75%
+	
+	.filter__close, .filter__plus
+		float: right
+		position: relative
+		margin-top: 5px
+		cursor: pointer
+		display: inline-block 
+		&:active
+			top: -1px
+
+	.filter__close
+		+s(close) 
+
+	.filter__plus
+		+s(plus)
+
+	.filter__green, .filter__red, .filter__grey, .filter__grey_dark
+		top: 0
+		bottom: 0
+		width: auto 
+		position: absolute
+		//+opacity(.3)
+		
+	.filter__green
+		background: #D1ECAE 
+		border-left: 1px solid #B0DC79
+		border-right: 1px solid #B0DC79
+		z-index: 2
+
+	.filter__red
+		background: #F6D4B9 
+		border-left: 1px solid #F6A377
+		border-right: 1px solid #F6A377
+		z-index: 3
+	
+	.filter__grey
+		border-left: 1px solid #d3d3d3
+		border-right: 1px solid #d3d3d3
+		background: #E9E9E9 
+		z-index: 2
+		+opacity(.3)
+
+	.filter__grey_dark
+		border-left: 1px solid #dddddd
+		border-right: 1px solid #dddddd
+		background: #E9E9E9 
+		z-index: 3 
+		
+
+	.filter__time
+		position: relative
+		float: left
+		width: 700px
+		height: 8px
+		margin: 20px 0 0 0
+		color: #898989
+		font-size: 10px
+		span
 			position: absolute
-			top: 0
-			margin-left: -14px
-			width: 14px
-			height: 100%
-			border-left: 1px solid #e6e6e6
-			border-right: 1px solid #e6e6e6
-			z-index: 4
-			background: #fff 
-			+opacity(0.5)
-			
-		.filter__period_1
-			left: 25%
-			
-		.filter__period_2
-			left: 50%
+			margin-left: -12px
+			display: inline-block
+			// &:first-child
+			// 	margin-left: -12px
+			// 	padding-right: 12px
+		.filter__time_1
+			left: 0
+		.filter__time_2
+			left: 24%
+		.filter__time_3
+			left: 49%
+		.filter__time_4
+			left: 74%
+		.filter__time_5
+			left: 100%
 
-		.filter__period_3
-			left: 75%
-		
-		.filter__close, .filter__plus
-			float: right
-			position: relative
-			margin-top: 5px
+
+.total
+	background: #49ADDC
+	margin-bottom: 20px 
+	height: 50px  
+	color: #fff
+	border-radius: 10px 
+	.total__continue
+		float: right
+		.total__button
+			border: 2px solid #1193cf
+			@include border-radius(7px)
+			@include background-clip(padding-box)
+			background-color: #fff
+			color: #1293cf
+			font-size: 18px
+			font-weight: bold
+			text-decoration: none
+			padding: 0 5px
+			margin: 7px 9px 0 0
+			height: 30px
+			line-height: 30px 
 			cursor: pointer
-			display: inline-block 
-			&:active
-				top: -1px
+			&:hover
+				background: #49ADDC
+				color: #fff  
 
-		.filter__close
-			+s(close) 
-
-		.filter__plus
-			+s(plus)
-
-		.filter__green, .filter__red, .filter__grey, .filter__grey_dark
-			top: 0
-			bottom: 0
-			width: auto 
-			+opacity(.3)
-			
-		.filter__green
-			background: #D1EDAB 
-			border-left: 1px solid #89f008
-			border-right: 1px solid #89f008
-			z-index: 2
-
-		.filter__red
-			background: #f89273 
-			border-left: 1px solid #f44009
-			border-right: 1px solid #f44009
-			z-index: 3
+	dl
+		float: left
+		line-height: 1 
+		padding: 10px 30px 0 13px 
+		height: 50px - 10px 
+		border-left: 1px dotted #A2D6EE 
+		&:first-child
+			border-left: none 
+		dt
+			font-size: 13px 
+		dd
+			font-size: 18px 
+			padding-top: 1px 
+			font-weight: bold
+.filter_pre
+	padding-top: 75px 
+	padding-bottom: 0
+	.filter__green, .filter__red, .filter__grey, .filter__grey_dark
+		bottom: 15px 
+	.filter__day
+		box-shadow: inset 0 -15px 0 #fff
 		
-		.filter__grey
-			border-left: 1px solid #d3d3d3
-			border-right: 1px solid #d3d3d3
-			background: #E9E9E9 
-			z-index: 2
-			+opacity(.3)
-
-		.filter__grey_dark
-			border-left: 1px solid #dddddd
-			border-right: 1px solid #dddddd
-			background: #D9D9D9 
-			z-index: 3 
-			+opacity(.3)
-
-		.filter__time
-			position: relative
-			float: left
-			width: 700px
-			height: 8px
-			margin: 20px 0 0 0
-			color: #898989
-			font-size: 10px
-			span
-				position: absolute
-				margin-left: -12px
-				display: inline-block
-				// &:first-child
-				// 	margin-left: -12px
-				// 	padding-right: 12px
-			.filter__time_1
-				left: 0
-			.filter__time_2
-				left: 24%
-			.filter__time_3
-				left: 49%
-			.filter__time_4
-				left: 74%
-			.filter__time_5
-				left: 100%
+	.filter__place
+		padding-top: 26px 
+	.filter__row
+		margin-bottom: 0 
+	.filter__time
+		margin-top: 0
+		margin-bottom: 15px 
+	.filter__day
+		height: 65px 
