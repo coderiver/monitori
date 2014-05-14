@@ -175,6 +175,10 @@ body
 		width: auto 
 		position: absolute
 		//+opacity(.3)
+		&:hover
+			.tooltip
+				display: block
+		
 		
 	.filter__green
 		background: #D1ECAE 
@@ -269,20 +273,107 @@ body
 			font-size: 18px 
 			padding-top: 1px 
 			font-weight: bold
+$map: $icons
 .filter_pre
-	padding-top: 75px 
+	padding-top: 15px 
 	padding-bottom: 0
+	.filter__check
+		+s(check)
+		cursor: pointer
+		display: inline-block
+		width: 46px
+		height: 23px  
+		margin: 8px 0 0 0 
+		+background-size(46px,23px) 
+		&.is-checked
+			+s(checked) 
+			width: 46px
+			height: 23px  
+			+background-size(46px,23px) 
+	.filter__switches
+		float: left
+		margin-top: 5px
+		width: 700px
+		position: relative
+		top: 5px 
+		.filter__sw
+			float: left
+			width: 163px 
+			margin-left: 16px 
+			text-align: center
+			// padding-bottom: 10px 
+			&:first-child
+				margin-left: 0 
+			h3
+				font-weight: normal
+				font-size: 15px 
 	.filter__green, .filter__red, .filter__grey, .filter__grey_dark
 		bottom: 15px 
 	.filter__day
 		box-shadow: inset 0 -15px 0 #fff
 		
 	.filter__place
-		padding-top: 26px 
+		padding-top: 72px 
+		min-height: 50px 
 	.filter__row
 		margin-bottom: 0 
 	.filter__time
 		margin-top: 0
-		margin-bottom: 15px 
+		margin-bottom: 7px 
 	.filter__day
 		height: 65px 
+	.period__start
+		position: absolute
+		top: 1px 
+		left: 1px 
+		font-size: 8px 
+		color: #67981A 
+	.period__finish
+		position: absolute
+		bottom: 1px 
+		right: 1px 
+		font-size: 8px 
+		color: #67981A 
+	.period__prev,.period__next
+		cursor: pointer
+		+s(prev)
+		width: 22px
+		height: 22px  
+		+background-size(22px,22px) 
+		position: absolute
+		left: -11px 
+		top: 50%
+		margin-top: -11px  
+	.period__next
+		+s(next)
+		width: 22px
+		height: 22px  
+		+background-size(22px,22px) 
+		left: auto 
+		right: -11px 
+.tooltip
+	display: block
+	position: absolute
+	top: 100%
+	left: 50%
+	margin-left: -85px 
+	padding: 10px 
+	background: #fff
+	font-size: 13px  
+	color: #000000 
+	width: 158px
+	text-align: center
+	font-weight: bold
+	@include border-radius(5px)
+	@include box-shadow(0 0 12px rgba(0,0,0,.3))
+	display: none
+	&:before
+		content: ' '
+		position: absolute
+		left: 50%
+		top: -4px 
+		margin-left: -5px  
+		+s(arr)
+		width: 7px 
+		height: 4px 
+		+background-size(7px,4px) 
