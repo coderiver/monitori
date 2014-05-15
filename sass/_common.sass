@@ -277,19 +277,6 @@ $map: $icons
 .filter_pre
 	padding-top: 15px 
 	padding-bottom: 0
-	.filter__check
-		+s(check)
-		cursor: pointer
-		display: inline-block
-		width: 46px
-		height: 23px  
-		margin: 8px 0 0 0 
-		+background-size(46px,23px) 
-		&.is-checked
-			+s(checked) 
-			width: 46px
-			height: 23px  
-			+background-size(46px,23px) 
 	.filter__switches
 		float: left
 		margin-top: 5px
@@ -336,21 +323,90 @@ $map: $icons
 		color: #67981A 
 	.period__prev,.period__next
 		cursor: pointer
-		+s(prev)
-		width: 22px
-		height: 22px  
-		+background-size(22px,22px) 
+		//+s(prev0)
 		position: absolute
-		left: -11px 
+		left: -9px
 		top: 50%
-		margin-top: -11px  
+		margin-top: -9px  
+		@include border-radius(17px)
+		@include background-clip(padding-box)
+		background-color: #fff
+		@include box-shadow(1px 2px 6px rgba(0,0,0,.39))
+		height: 18px 
+		width: 18px 
+		i
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 7px 
+			height: 10px 
+			margin-left: -4px 
+			margin-top: -5px 
+			+s(prev0)
+			+retina
+				+s(prev)
+				width: 7px 
+				height: 10px 
+				+background-size(7px,10px) 
 	.period__next
-		+s(next)
-		width: 22px
-		height: 22px  
-		+background-size(22px,22px) 
 		left: auto 
-		right: -11px 
+		right: -9px 
+		i
+			+s(next0)
+			margin-left: -3px 
+			+retina
+				+s(next)
+				width: 7px 
+				height: 10px 
+				+background-size(7px,10px) 
+	// 	+s(next0)
+		// +retina
+		// 	+s(next)
+		// 	width: 22px
+		// 	height: 22px  
+		// 	+background-size(22px,22px) 
+		
+.check
+	display: inline-block
+	width: 46px
+	height: 22px  
+	margin: 8px 0 0 0 
+	background: #CECECE
+	border-radius: 23px  
+	position: relative
+	overflow: hidden
+	cursor: pointer
+	.check__thumb
+		width: 20px
+		height: 20px
+		position: absolute
+		left: 1px 
+		top: 1px 
+		display: block
+		border-radius: 50% 
+		background-color: #fff
+		+box-shadow(0 1px 10px rgba(0,0,0,.5))
+		+transition(all .1s linear)
+	.check__on,.check__off
+		width: 50%
+		position: absolute
+		left: 0
+		top: 0
+		height: 22px    
+		line-height: 22px
+		font-size: 10px 
+		color: #fff 
+		font-weight: bold
+		text-align: center
+	.check__off
+		left: auto 
+		right: 7px
+		text-align: right
+	&.is-checked
+		background: #77CF44 
+		.check__thumb
+			left: 25px
+
 .tooltip
 	display: block
 	position: absolute
