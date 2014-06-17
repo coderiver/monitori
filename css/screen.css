@@ -50,6 +50,7 @@ body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; backgr
 .filter .filter__part2 { margin-left: 25%; left: 2px; width: 159px; }
 .filter .filter__part3 { right: 189px; width: 158px; }
 .filter .filter__part4 { right: 0; width: 173px; }
+.filter.filter_pre .filter__part1, .filter.filter_pre .filter__part2, .filter.filter_pre .filter__part3, .filter.filter_pre .filter__part4 { height: 64px; }
 .filter .filter__close, .filter .filter__plus { float: right; position: relative; margin-top: 5px; cursor: pointer; display: inline-block; }
 .filter .filter__close:active, .filter .filter__plus:active { top: -1px; }
 .filter .filter__close { background-image: url('data:"image/png";base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAB+SURBVHjarFJBCoAwDOvVX+U/+qI9QBjLYfigfGVeJpSigsVDYHRJFroYKAO1gmrz/IY2uWagNlBjor+IuuNtBupwg/Hwcgucw0AtwW2A2p1oD3cd1OJdayCUCT+rFz9Giu5PKexuCeVGVCLvN2Eq6uflpL8jXYB05VIlPwcAHlS8PNp0+UsAAAAASUVORK5CYII='); width: 14px; height: 14px; }
