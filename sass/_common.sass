@@ -185,10 +185,10 @@ body
 			top: -1px
 
 	.filter__close
-		+s(close) 
+		+sn(close) 
 
 	.filter__plus
-		+s(plus)
+		+sn(plus)
 
 	.filter__green, .filter__red, .filter__grey, .filter__grey_dark
 		top: 0
@@ -363,7 +363,9 @@ $map: $icons
 			height: 10px 
 			margin-left: -4px 
 			margin-top: -5px 
-			+s(prev0)
+			background: red
+			z-index: 10000  
+			+sn(prev0)
 			+retina
 				+s(prev)
 				width: 7px 
@@ -373,7 +375,7 @@ $map: $icons
 		left: auto 
 		right: -9px 
 		i
-			+s(next0)
+			+sn(next0)
 			margin-left: -3px 
 			+retina
 				+s(next)
@@ -450,7 +452,7 @@ $map: $icons
 		left: 50%
 		top: -4px 
 		margin-left: -5px  
-		+s(arr)
+		+sn(arr)
 		width: 7px 
 		height: 4px 
 		+background-size(7px,4px) 
