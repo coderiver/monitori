@@ -46,7 +46,7 @@ body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; backgr
 .filter .filter__period_1 { left: 25%; }
 .filter .filter__period_2 { left: 50%; }
 .filter .filter__period_3 { left: 75%; }
-.filter .filter__part1, .filter .filter__part2, .filter .filter__part3, .filter .filter__part4 { position: absolute; top: 0; position: absolute; width: 160px; height: 17px; }
+.filter .filter__part1, .filter .filter__part2, .filter .filter__part3, .filter .filter__part4 { position: absolute; top: 0; position: absolute; width: 160px; height: 17px; z-index: 200; }
 .filter .filter__part2 { margin-left: 25%; left: 2px; width: 159px; }
 .filter .filter__part3 { right: 189px; width: 158px; }
 .filter .filter__part4 { right: 0; width: 173px; }
